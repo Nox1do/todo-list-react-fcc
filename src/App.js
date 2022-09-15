@@ -1,7 +1,8 @@
 import './App.css';
 import reactLogo from './imagenes/react-logo.png';
 import Tarea from './componentes/Tarea.js';
-
+import TareaFormulario from './componentes/TareaFormulario';
+import ListaDeTareas from './componentes/ListadeTareas';
 
 
 
@@ -16,8 +17,7 @@ function App() {
       </div>
       <div className='tareas-lista-principal'>
         <h1>Mis Tareas</h1>
-        <Tarea
-        texto='Aprender React' />
+       <ListaDeTareas />
       </div>
     </div>
   );

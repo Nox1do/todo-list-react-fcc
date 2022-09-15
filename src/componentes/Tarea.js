@@ -2,13 +2,14 @@ import React from "react";
 import '../hojas-de-estilo/Tarea.css';
 import { AiOutlineDelete} from "react-icons/ai";
 
-function Tarea ({ texto }){
+function Tarea ({ id, texto, completada, completarTarea, eliminarTarea }){
     return (
-<div className='tarea-contenedor'>
-  <div className='tarea-texto'>
+<div className={completada ? 'tarea-contenedor completada' : 'tarea-contenedor'}>
+  <div className='tarea-texto' onClick={()=> completarTarea(id)}>
         {texto}
   </div>
-  <div className='tarea-contenedor-iconos'>
+  <div className='tarea-contenedor-iconos'
+  onClick={()=> eliminarTarea(id)}>
     <AiOutlineDelete  className='tarea-icono'
      /> 
   </div>
